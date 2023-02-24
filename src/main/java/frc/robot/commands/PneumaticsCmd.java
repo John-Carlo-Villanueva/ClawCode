@@ -5,8 +5,10 @@ import frc.robot.subsystems.ClawSubsytem;
 
 public class PneumaticsCmd extends CommandBase{
     
+    //Variables
     private ClawSubsytem clawSub;
 
+    //Constructor
     public PneumaticsCmd(ClawSubsytem clawSub){
         this.clawSub = clawSub;
     }
@@ -14,16 +16,16 @@ public class PneumaticsCmd extends CommandBase{
     @Override
     public void initialize(){
         clawSub.toggle();
-    }
+    } //Starting action of PneumaticsCmd
 
     @Override
-    public void execute(){}
+    public void execute(){} //Middle action of PneumaticsCmd
 
     @Override
-    public void end(boolean interrupted){}
+    public void end(boolean interrupted){} //End action of PneumaticsCmd
 
     @Override
     public boolean isFinished(){
         return true;
-    }
+    } //Method to activate end method
 }

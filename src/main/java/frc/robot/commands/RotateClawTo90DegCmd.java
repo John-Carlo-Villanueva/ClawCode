@@ -5,30 +5,30 @@ import frc.robot.subsystems.ClawSubsytem;
 
 public class RotateClawTo90DegCmd extends CommandBase{
 
+    //Variables
     private ClawSubsytem clawSub;
 
+    //Constructor
     public RotateClawTo90DegCmd(ClawSubsytem clawSub){
         this.clawSub = clawSub;
         addRequirements(clawSub);
     }
     
     @Override
-    public void initialize(){}
+    public void initialize(){} //Starting action of RotateClawTo90DegCmd
 
     @Override
     public void execute(){
         clawSub.rotateTo90Deg();
-    }
+    } //Middle action of RotateClawTo90DegCmd
 
     @Override
     public void end(boolean interrupted){
         clawSub.stopClaw();
-    }
+    } //End action of RotateClawTo90DegCmd
 
     @Override
     public boolean isFinished(){
-        if (clawSub.getClawEnc() == 100){
-            return true;
-        } return false;
-    }
+        return clawSub.getClawEnc() == 95;
+    } //Method to activate end method
 }
