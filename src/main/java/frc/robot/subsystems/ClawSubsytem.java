@@ -32,7 +32,6 @@ public class ClawSubsytem extends SubsystemBase{
     } //Set the claw position to 0
 
     //Pneumatics Methods
-    
     public void toggle(){
         clawSolenoid.toggle();
     } //if active and claw closed then stay open; if active and claw open then stay close
